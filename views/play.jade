@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+  .col-sm-8.col-sm-offset-2
+    #board
+    .panel.panel-default
+      .panel-heading
+         h5 Game information
+      ul.list-group
+        li.list-group-item Status:
+          span#info-status
+          a#btn-reset-game.pull-right(type='button', style='cursor: pointer; margin-left: 20px;',onclick='resetGame()') Restart game
+          a#btn-reset-game.pull-right(type='button', style='cursor: pointer;', onclick='undoGame()') Undo
+          li.list-group-item Fen:
+            span#info-fen
