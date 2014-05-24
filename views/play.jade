@@ -3,7 +3,6 @@ extends layout
 block content
 
   .col-sm-8.col-sm-offset-2
-    #board
     .panel.panel-default
       .panel-heading
          h5 Game information
@@ -14,3 +13,4 @@ block content
           a#btn-reset-game.pull-right(type='button', style='cursor: pointer;', onclick='undoGame()') Undo
           li.list-group-item Fen:
             span#info-fen
+    #board

@@ -204,7 +204,7 @@ authForm.on('submit', function() {
     userModel.splice(index, 1);
     fs.writeFileSync('models/User.js', userModel.join(os.EOL));
 
-    index = app.indexOf("app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email', 'user_location'] }));");
+    index = app.indexOf("app.get('/auth/facebook', passport.authenticate('facebook', { scope: ['email'] }));");
     app.splice(index, 4);
     fs.writeFileSync('app.js', app.join(os.EOL));
   }
